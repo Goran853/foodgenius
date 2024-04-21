@@ -10,7 +10,8 @@
       "@components/*": ["components/*"],
       "@hooks/*": ["hooks/*"],
       "@utils/*": ["utils/*"],
-      "@config/*": ["config/*"]
+      "@config/*": ["config/*"],
+      "@assets/*": ["assets/*"]
     },
 
     /* Bundler mode */
