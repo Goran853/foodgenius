@@ -59,25 +59,27 @@ function Home() {
           <img
             src={armUp}
             alt="Foodgenius Held"
-            className="object-contain object-bottom h-full"
+            className="object-contain h-32 md:h-56 lg:h-full"
           />
 
           <div className="flex flex-col justify-evenly lg:text-2xl underline text-center">
-            <div className="bg-white p-4 md:p-2 flex justify-between items-center">
-              <h3>Werde ein Held</h3>
+            <div className="bg-white p-4 md:p-2 flex justify-center items-center">
+              <h3 className="flex-grow">Werde ein Held</h3>
               <img
                 src={action1}
                 alt="Paket Optionen"
-                className="action-border md:w-10 md:h-10"
+                className="action-border md:w-10 md:h-10 ml-auto"
               />
             </div>
 
-            <div className="bg-white p-4 md:p-2 flex justify-between items-center">
-              <h3>Ich möchte persönlich beraten werden</h3>
+            <div className="bg-white p-4 md:p-2 flex justify-center items-center">
+              <h3 className="flex-grow">
+                Ich möchte persönlich beraten werden
+              </h3>
               <img
                 src={kontakt}
                 alt="Kontakt Formular"
-                className="action-border md:w-10 md:h-10"
+                className="action-border md:w-10 md:h-10 "
               />
             </div>
           </div>

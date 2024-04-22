@@ -15,7 +15,7 @@
 ### Komplett responsives Design wie das Original:
 
 - [x] < 768px
-- [ ] < 1024px
+- [x] < 1024px
 - [ ] < 1280px
 
 ### Refactoring:
