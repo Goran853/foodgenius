@@ -25,12 +25,12 @@ function Home() {
 
       {/* Hero description */}
       <section className="flex justify-center py-10 bg-white max-md:mt-20 ">
-        <div className="text-center max-container flex flex-col gap-8 items-center">
-          <h2 className="md:text-4xl text-3xl max-w-[80%]">
+        <div className="text-center max-container flex flex-col gap-8 items-center md:w-4/5">
+          <h2 className="lg:text-4xl md:text-2xl text-3xl max-w-[80%]">
             FoodGenius ist Kassensystem, Online-Shop und Restaurant /
             Lieferservice Management aus einer Hand
           </h2>
-          <p className="md:text-2xl ">
+          <p className="lg:text-2xl md:w-[70%] md:text-sm">
             <span className="inline xl:block">
               FoodGenius lässt Dich dabei glänzen, wo Du am besten bist:&nbsp;
             </span>
@@ -38,7 +38,7 @@ function Home() {
               Gastgeber sein. FoodGenius regelt den Rest.
             </span>
           </p>
-          <p className="md:text-2xl">
+          <p className="lg:text-2xl md:w-[70%] md:text-sm">
             <span className="md:block">
               Viele Systeme können Dir punktuell das Leben erleichtern.
             </span>{' '}
@@ -49,33 +49,35 @@ function Home() {
       </section>
 
       {/* Benefits */}
-      <section className="text-center bg-gray-light lg:py-36 py-20">
+      <section className="text-center bg-gray-light lg:py-36 py-20 md:py-8 md:pt-20">
         <Benefits />
       </section>
 
       {/* Action section */}
-      <section className="bg-gray-medium h-96 max-md:hidden">
+      <section className="bg-gray-medium h-96 md:h-56 max-md:hidden">
         <div className="max-container grid grid-cols-3 gap-8 h-full">
           <img
             src={armUp}
             alt="Foodgenius Held"
             className="object-contain object-bottom h-full"
           />
-          <div className="flex flex-col justify-evenly text-2xl underline text-center">
-            <div className="bg-white p-4 flex justify-between items-center">
+
+          <div className="flex flex-col justify-evenly lg:text-2xl underline text-center">
+            <div className="bg-white p-4 md:p-2 flex justify-between items-center">
               <h3>Werde ein Held</h3>
               <img
                 src={action1}
                 alt="Paket Optionen"
-                className="action-border"
+                className="action-border md:w-10 md:h-10"
               />
             </div>
-            <div className="bg-white p-4 flex justify-between items-center">
+
+            <div className="bg-white p-4 md:p-2 flex justify-between items-center">
               <h3>Ich möchte persönlich beraten werden</h3>
               <img
                 src={kontakt}
                 alt="Kontakt Formular"
-                className="action-border"
+                className="action-border md:w-10 md:h-10"
               />
             </div>
           </div>
@@ -83,14 +85,14 @@ function Home() {
       </section>
 
       {/* Hardware */}
-      <section className="py-24 bg-white w-screen ">
+      <section className="py-24 bg-white w-screen md:py-12">
         <div className="flex flex-col items-center max-container">
           <img
             src={hardware}
             alt="Foodgenius Hardware"
             className="object-contain h-full"
           />
-          <p className="text-center md:text-2xl md:w-[60%] pt-8 pb-12">
+          <p className="text-center lg:text-2xl md:text-sm md:w-[60%] pt-8 pb-12">
             FoodGenius lässt sich individuell auf Deine Wünsche anpassen. Ganz
             egal wie groß dein Restaurant oder Lieferservice ist und welche
             Ziele Du hast - FoodGenius begleitet Dich auf Deinem Weg des
@@ -99,7 +101,7 @@ function Home() {
         </div>
 
         {/* Hardware Features */}
-        <div className="grid md:grid-cols-4 gap-16 text-center max-container">
+        <div className="grid md:grid-cols-4 gap-16 md:gap-6 text-center max-container">
           <HardwareFeatures
             title="Starterbildschirm"
             description="Genialer Durchblick mit dem FoodGenius Dashboard: Du hast Zahlen,
