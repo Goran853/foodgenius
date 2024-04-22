@@ -25,4 +25,8 @@
     background-color: theme('colors.brand-primary');
     border: none;
   }
+
+  .menu-gradient {
+    background: linear-gradient(to right, #991430 0%, #d7242a 100%);
+  }
 }

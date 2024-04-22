@@ -1,6 +1,7 @@
 import logoHeader from '@assets/logo-header.png';
 import callIcon from '@assets/FoodGenius-call-icon.svg';
 import facebookIcon from '@assets/FoodGenius-facebook-icon.svg';
+import HamburgerMenu from './HamburgerMenu';
 const links = [
   'Vorteile',
   'Produkt',
@@ -34,6 +35,7 @@ function Header() {
           </div>
         </div>
       </div>
+      <HamburgerMenu />
     </nav>
   );
 }
