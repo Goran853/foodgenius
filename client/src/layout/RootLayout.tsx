@@ -9,6 +9,7 @@ function RootLayout() {
       <img
         src={stickyContact}
         alt="Kontakt Icon"
+        loading="lazy"
         className="fixed right-0 top-1/2 z-30 max-md:hidden md:w-8 lg:w-12 xl:w-14 2xl:w-16"
       />
       <header>

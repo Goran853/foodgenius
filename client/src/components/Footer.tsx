@@ -68,6 +68,7 @@ function Contact({ department, phone, availability, email }: ContactProps) {
         <img
           src={phoneIcon}
           alt="Handy"
+          loading="lazy"
           className="w-4 md:w-2 lg:w-3 2xl:w-4"
         />
         <p className="md:text-sm lg:text-xl xl:text-2xl">{phone}</p>
@@ -82,6 +83,7 @@ function Contact({ department, phone, availability, email }: ContactProps) {
           <img
             src={emailWhite}
             alt="Handy"
+            loading="lazy"
             className="w-6 md:w-3 lg:w-4 xl:w-5 2xl:w-6"
           />
           <p>{email}</p>
@@ -100,6 +102,7 @@ function Footer() {
           <img
             src={logoFooter}
             alt="Foodgenius logo"
+            loading="lazy"
             className="object-contain self-start w-16 xl:w-24"
           />
         </div>
@@ -120,6 +123,7 @@ function Footer() {
                   <img
                     src={link.imgSrc}
                     alt={link.imgAlt}
+                    loading="lazy"
                     className="w-4 md:w-2 xl:w-4"
                   />
                 ) : (
