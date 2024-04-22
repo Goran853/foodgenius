@@ -5,9 +5,11 @@ type HardwareFeatureProps = {
 
 function HardwareFeatures({ title, description }: HardwareFeatureProps) {
   return (
-    <div className="flex flex-col gap-4 text-center">
-      <h3 className="text-2xl">{title}</h3>
-      <p className="text-lg">{description}</p>
+    <div className="flex flex-col gap-40">
+      <div className="flex flex-col gap-6 text-center">
+        <h3 className="md:text-xl text-2xl">{title}</h3>
+        <p className="md:text-sm">{description}</p>
+      </div>
     </div>
   );
 }

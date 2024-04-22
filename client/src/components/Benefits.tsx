@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 function Benefits() {
   const benefits = [
     {
@@ -18,13 +20,23 @@ function Benefits() {
   ];
 
   return (
-    <div className="grid grid-cols-3 gap-8 max-container">
-      {benefits.map((benefit) => (
-        <div key={benefit.title} className="flex flex-col">
-          <h3 className="text-4xl">{benefit.title}</h3>
-          <p className="text-lg mt-10">{benefit.description}</p>
-        </div>
-      ))}
+    <div className="pt-32 max-container">
+      <div className="grid md:grid-cols-3 md:gap-8 gap-48 ">
+        {benefits.map((benefit) => (
+          <div key={benefit.title} className="flex flex-col">
+            <h3 className="lg:text-4xl md:text-2xl text-3xl">
+              {benefit.title}
+            </h3>
+            <p className="lg:text-lg md:text-sm mt-10">{benefit.description}</p>
+          </div>
+        ))}
+      </div>
+      <Link
+        to="/"
+        className="border-2 border-black rounded-full py-2 mt-12 block "
+      >
+        alle vorteile ansehen
+      </Link>
     </div>
   );
 }

@@ -5,7 +5,7 @@
 
 @layer components {
   .max-container {
-    max-width: 1100px;
+    max-width: 95%;
     margin: 0 auto;
   }
 
