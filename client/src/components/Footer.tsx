@@ -1,7 +1,6 @@
 import logoFooter from '@assets/logo-footer-e1508923672710.png';
 import facebookFooter from '@assets/footer-facebook.svg';
 import phoneIcon from '@assets/phone.svg';
-import kontakt from '@assets/kontakt.svg';
 import emailWhite from '@assets/email-white.svg';
 import { Link } from 'react-router-dom';
 
@@ -83,20 +82,22 @@ function Contact({ department, phone, availability, email }: ContactProps) {
 function Footer() {
   return (
     <footer className="bg-brand-primary text-white text-lg w-screen py-6">
-      <div className="grid grid-cols-1 md:grid-fr gap-6 py-8 w-full max-w-full md:max-container mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 py-8 md:p-0 w-full max-w-full md:max-container mx-auto">
         <div className="flex justify-center w-full">
           <img
             src={logoFooter}
             alt="Foodgenius logo"
-            className="object-contain self-start"
+            className="object-contain self-start w-16"
           />
         </div>
-        <div className="flex flex-col gap-4">
+        <div className="flex flex-col gap-4 md:gap-0">
           {contacts.map((contact) => (
             <Contact key={contact.department} {...contact} />
           ))}
         </div>
-        <ul className="flex flex-wrap justify-center gap-6 underline md:items-center md:self-start md:text-right md:text-sm">
+
+        {/* Links */}
+        <ul className="flex flex-wrap md:flex-col justify-center gap-6 underline md:items-center md:self-start md:text-right md:text-sm">
           {footerLinks.map((link) => (
             <li key={link.name}>
               <Link to={link.url} key={link.name}>
