@@ -2,6 +2,22 @@ import logoFooter from '@assets/logo-footer-e1508923672710.png';
 import facebookFooter from '@assets/footer-facebook.svg';
 import phoneIcon from '@assets/phone.svg';
 import kontakt from '@assets/kontakt.svg';
+import emailWhite from '@assets/email-white.svg';
+import { Link } from 'react-router-dom';
+
+type ContactProps = {
+  department: string;
+  phone: string;
+  availability: string;
+  email?: string;
+};
+
+type FooterLink = {
+  name: string;
+  url: string;
+  imgSrc?: string;
+  imgAlt?: string;
+};
 
 const contacts = [
   {
@@ -30,25 +46,33 @@ const contacts = [
   },
 ];
 
-type ContactProps = {
-  department: string;
-  phone: string;
-  availability: string;
-  email?: string;
-};
+const footerLinks: FooterLink[] = [
+  {
+    name: 'Facebook',
+    url: 'https://www.facebook.com/foodgenius.de/',
+    imgSrc: facebookFooter,
+    imgAlt: 'Facebook Logo',
+  },
+  { name: 'TeamViewer', url: 'https://get.teamviewer.com/foodgenius' },
+  { name: 'Impressum', url: 'https://foodgenius.de/impressum/' },
+  { name: 'Datenschutz', url: 'https://foodgenius.de/datenschutz/' },
+];
 
 function Contact({ department, phone, availability, email }: ContactProps) {
   return (
-    <div className="flex flex-col gap-1 pb-8">
-      <p className=" text-2xl font-strong">{department}</p>
+    <div className="flex flex-col gap-1 md:pb-8 items-center md:items-start">
+      <p className="lg:text-2xl md:text-sm font-strong ">{department}</p>
+
       <div className="flex gap-4">
-        <img src={phoneIcon} alt="Handy" />
-        <p className="text-xl">{phone}</p>
+        <img src={phoneIcon} alt="Handy" className="w-4 md:w-2" />
+        <p className="lg:text-xl md:text-sm">{phone}</p>
       </div>
-      <p className="text-lg">{availability}</p>
+
+      <p className="lg:text-lg md:text-xs text-sm">{availability}</p>
+
       {email && (
-        <div className="flex gap-4 underline text-xl">
-          <img src={phoneIcon} alt="Handy" />
+        <div className="flex gap-4 underline lg:text-xl md:text-sm">
+          <img src={emailWhite} alt="Handy" className="w-6 md:w-3" />
           <p>{email}</p>
         </div>
       )}
@@ -58,21 +82,36 @@ function Contact({ department, phone, availability, email }: ContactProps) {
 
 function Footer() {
   return (
-    <footer className="bg-brand-primary text-white text-lg w-screen">
-      <div className="grid max-container gap-8 grid-fr py-8">
-        <img src={logoFooter} alt="Foodgenius logo" />
-        <div>
+    <footer className="bg-brand-primary text-white text-lg w-screen py-6">
+      <div className="grid grid-cols-1 md:grid-fr gap-6 py-8 w-full max-w-full md:max-container mx-auto">
+        <div className="flex justify-center w-full">
+          <img
+            src={logoFooter}
+            alt="Foodgenius logo"
+            className="object-contain self-start"
+          />
+        </div>
+        <div className="flex flex-col gap-4">
           {contacts.map((contact) => (
             <Contact key={contact.department} {...contact} />
           ))}
         </div>
-        <ul className="text-right">
-          <li>
-            <img src={facebookFooter} alt="Facebook logo" />
-          </li>
-          <li>TeamViewer</li>
-          <li>Impressum</li>
-          <li>Datenschutz</li>
+        <ul className="flex flex-wrap justify-center gap-6 underline md:items-center md:self-start md:text-right md:text-sm">
+          {footerLinks.map((link) => (
+            <li key={link.name}>
+              <Link to={link.url} key={link.name}>
+                {link.imgSrc ? (
+                  <img
+                    src={link.imgSrc}
+                    alt={link.imgAlt}
+                    className="w-4 md:w-2"
+                  />
+                ) : (
+                  link.name
+                )}
+              </Link>
+            </li>
+          ))}
         </ul>
       </div>
     </footer>
