@@ -20,15 +20,18 @@ function Benefits() {
   ];
 
   return (
-    <div className="pt-32 md:pt-0 max-container">
+    <div className="pt-32 max-container md:pt-0">
       {/* Benefits */}
-      <div className="grid md:grid-cols-3 lg:gap-8 md:gap-4 gap-48 ">
+      <div className="grid gap-48 md:grid-cols-3 md:gap-4 lg:gap-8">
         {benefits.map((benefit) => (
           <div key={benefit.title} className="flex flex-col">
-            <h3 className="lg:text-4xl md:text-2xl text-3xl">
+            <h3 className="text-3xl md:text-2xl lg:text-4xl xl:min-h-20 2xl:text-5xl">
               {benefit.title}
             </h3>
-            <p className="lg:text-lg md:text-xs mt-10">{benefit.description}</p>
+
+            <p className="mt-10 md:text-xs lg:text-base xl:text-lg 2xl:text-xl">
+              {benefit.description}
+            </p>
           </div>
         ))}
       </div>
@@ -37,7 +40,7 @@ function Benefits() {
       <div className="mt-10">
         <Link
           to="/"
-          className="border-2 border-black rounded-full py-2 mt-12 block md:inline md:text-xs md:px-6 md:py-1"
+          className="border-2 border-black rounded-full py-2 mt-12 block md:inline md:text-xs md:px-6 md:py-1 xl:text-2xl xl:py-1 xl:px-10 2xl:text-3xl"
         >
           alle vorteile ansehen
         </Link>
