@@ -14,19 +14,23 @@ const links = [
 function Header() {
   return (
     <nav className=" bg-opacity-80 bg-white w-screen ">
-      <div className="flex items-center justify-between max-container lg:h-20 h-14">
-        <img src={logoHeader} alt="FoodGenius" className="lg:w-40 w-60" />
+      <div className="flex items-center justify-between max-container h-14 lg:h-20 xl:h-24 2xl:h-28">
+        <img
+          src={logoHeader}
+          alt="FoodGenius"
+          className="w-60 lg:w-80 xl:w-96 2xl:w-[28rem]"
+        />
         <div className="max-md:hidden">
           <div className="flex flex-col">
             <div className="flex justify-end items-start gap-1">
-              <img src={callIcon} alt="Phone" className="w-4" />
-              <img src={facebookIcon} alt="Facebook" className="w-6" />
+              <img src={callIcon} alt="Phone" className="w-4 xl:w-6" />
+              <img src={facebookIcon} alt="Facebook" className="w-6 xl:w-9" />
             </div>
-            <ul className="flex justify-end space-x-4 ">
+            <ul className="flex justify-end gap-4 xl:gap-8">
               {links.map((link) => (
                 <li
                   key={link}
-                  className="text-brand-secondary lg:text-sm text-xs"
+                  className="text-brand-secondary text-xs lg:text-sm xl:text-lg 2xl:text-xl"
                 >
                   {link}
                 </li>
