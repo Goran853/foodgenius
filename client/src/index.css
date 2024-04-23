@@ -8,6 +8,11 @@
     max-width: 95%;
     margin: 0 auto;
   }
+  @screen 2xl {
+    .max-container {
+      @apply max-w-7xl;
+    }
+  }
 
   .grid-fr {
     grid-template-columns: 1fr 2fr 3fr;
