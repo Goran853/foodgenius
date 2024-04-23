@@ -4,3 +4,8 @@ export type FooterLink = {
   imgSrc?: string;
   imgAlt?: string;
 };
+
+export type NavBarLink = {
+  name: string;
+  links?: string[];
+};

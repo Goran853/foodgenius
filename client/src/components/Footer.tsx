@@ -4,7 +4,7 @@ import phoneIcon from '@assets/phone.svg';
 import emailWhite from '@assets/email-white.svg';
 import { Link } from 'react-router-dom';
 import { contacts } from '@data/contacts';
-import { FooterLink as TFooterLink } from '../types';
+import { FooterLink as TFooterLink } from '../types/types';
 
 type ContactProps = {
   department: string;
