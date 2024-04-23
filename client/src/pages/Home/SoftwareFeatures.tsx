@@ -1,9 +1,9 @@
-type HardwareFeatureProps = {
+type SoftwareFeatureProps = {
   title: String;
   description: String;
 };
 
-function HardwareFeatures({ title, description }: HardwareFeatureProps) {
+function SoftwareFeatures({ title, description }: SoftwareFeatureProps) {
   return (
     <div className="flex flex-col gap-40">
       <div className="flex flex-col gap-6 text-center">
@@ -18,4 +18,4 @@ function HardwareFeatures({ title, description }: HardwareFeatureProps) {
     </div>
   );
 }
-export default HardwareFeatures;
+export default SoftwareFeatures;

@@ -1,10 +1,9 @@
-import Benefits from '@components/Benefits';
 import armUp from '@assets/FoodGenius-Keyimage-arm-up.png';
 import logoSlider from '@assets/FoodGenius-home-slider.jpg';
-import hardware from '@assets/home_hardware.jpg';
-import HardwareFeatures from '@components/HardwareFeatures';
 import action1 from '@assets/action1.svg';
 import kontakt from '@assets/kontakt.svg';
+import BenefitsSection from '@components/BenefitsSection';
+import TechSection from './Home/TechSection';
 
 function Home() {
   return (
@@ -50,7 +49,7 @@ function Home() {
 
       {/* Benefits */}
       <section className="bg-gray-light text-center py-20 md:py-8 md:pt-20 lg:py-20 xl:py-24">
-        <Benefits />
+        <BenefitsSection />
       </section>
 
       {/* Action section */}
@@ -87,53 +86,9 @@ function Home() {
         </div>
       </section>
 
-      {/* Hardware */}
+      {/* Tech Section */}
       <section className="bg-white py-24 w-screen md:py-12">
-        <div className="flex flex-col items-center max-container">
-          <img
-            src={hardware}
-            alt="Foodgenius Hardware"
-            className="object-contain h-full"
-          />
-          <p className="pt-8 pb-12 text-center md:w-[60%] md:text-sm lg:text-xl xl:text-2xl">
-            FoodGenius lässt sich individuell auf Deine Wünsche anpassen. Ganz
-            egal wie groß dein Restaurant oder Lieferservice ist und welche
-            Ziele Du hast - FoodGenius begleitet Dich auf Deinem Weg des
-            Erfolgs.
-          </p>
-        </div>
-
-        {/* Hardware Features */}
-        <div className="grid gap-16 text-center max-container md:grid-cols-4 md:gap-6">
-          <HardwareFeatures
-            title="Starterbildschirm"
-            description="Genialer Durchblick mit dem FoodGenius Dashboard: Du hast Zahlen,
-              Ware und Mitarbeiter im Blick – und das gute Geschäft ist kein
-              Zufall."
-          />
-          <HardwareFeatures
-            title="SmartDelivery"
-            description="FoodGenius plant die Routen Deiner Fahrer intelligent und
-              eigenständig: Das schafft Übersicht, reduziert Lieferzeiten und
-              erhöht die Kundenzufriedenheit."
-          />
-
-          <HardwareFeatures
-            title="PerfectDish"
-            description="Die Zubereitungsstation sorgt dafür, dass jeder weiß, was er zu
-              tun hat und was die anderen gerade machen. Sonderwünsche Deiner
-              Gäste werden mit Sicherheit berücksichtigt dank dem FoodGenius
-              Checksystem."
-          />
-
-          <HardwareFeatures
-            title="GeniusCommunity"
-            description="Jede gute Beziehung basiert auf einer konstant geführten,
-              positiven Kommunikation. FoodGenius GeniusCommunity ist eine Art
-              nach Themen und Prioritäten geordnete WhatsApp Gruppe, die Du
-              moderierst."
-          />
-        </div>
+        <TechSection />
       </section>
     </div>
   );
