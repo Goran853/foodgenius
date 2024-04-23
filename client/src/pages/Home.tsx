@@ -15,7 +15,7 @@ const heroHomeContent = {
 
 function Home() {
   return (
-    <div className="text-brand-secondary -mt-20">
+    <div className="text-brand-secondary -mt-20 xl:-mt-24 2xl:-mt-28">
       {/* Hero image and title */}
       <div className="max-md:hidden">
         <img
@@ -25,7 +25,8 @@ function Home() {
         />
         <div className="grid grid-cols-2 absolute top-0 left-0 right-0 -z-20 xl:h-96 2xl:h-[28rem] lg:h-72 h-60 max-container">
           <h1 className="col-start-2 self-center text-center text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl ">
-            <span className="block">Genial effizienter</span>Restaurant-Manager
+            <span className="block">Genial effizienter</span>
+            Restaurant-Manager
           </h1>
         </div>
       </div>
