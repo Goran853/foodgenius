@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-function Benefits() {
+function BenefitsSection() {
   const benefits = [
     {
       title: 'Immer für Dich da Support',
@@ -25,10 +25,12 @@ function Benefits() {
       <div className="grid gap-48 md:grid-cols-3 md:gap-4 lg:gap-8">
         {benefits.map((benefit) => (
           <div key={benefit.title} className="flex flex-col">
+            {/* Title */}
             <h3 className="text-3xl md:text-2xl lg:text-4xl xl:min-h-20 2xl:text-5xl">
               {benefit.title}
             </h3>
 
+            {/* Description */}
             <p className="mt-10 md:text-xs lg:text-base xl:text-lg 2xl:text-xl">
               {benefit.description}
             </p>
@@ -48,4 +50,4 @@ function Benefits() {
     </div>
   );
 }
-export default Benefits;
+export default BenefitsSection;

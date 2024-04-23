@@ -10,6 +10,7 @@ function HardwareFeatures({ title, description }: HardwareFeatureProps) {
         <h3 className="text-2xl md:text-base lg:text-2xl xl:text-3xl 2xl:text-4xl">
           {title}
         </h3>
+
         <p className="md:text-xs lg:text-sm xl:text-lg 2xl:text-xl">
           {description}
         </p>

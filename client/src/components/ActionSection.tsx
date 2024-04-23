@@ -9,7 +9,6 @@ type ActionBlockProps = {
 };
 
 const actions = [
-  // 1. ActionBlock reused in /vorteile (own compoenent?)
   {
     text: 'Werde ein Held',
     imgSrc: action1,
