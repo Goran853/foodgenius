@@ -2,15 +2,7 @@ import logoHeader from '@assets/logo-header.png';
 import callIcon from '@assets/FoodGenius-call-icon.svg';
 import facebookIcon from '@assets/FoodGenius-facebook-icon.svg';
 import HamburgerMenu from './HamburgerMenu';
-
-const navLinks = [
-  'Vorteile',
-  'Produkt',
-  'Referenzen',
-  'Jobs',
-  'Über uns',
-  'Kontakt',
-];
+import { navLinks } from '@data/navLinks';
 
 function Header() {
   return (
