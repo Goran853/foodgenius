@@ -21,6 +21,6 @@
 
 ### Refactoring:
 
-- [ ] Komponenten entschlacken
-- [ ] Types und Daten separieren
-- [ ] Ordnerstruktur anpassen
+- [x] Komponenten entschlacken
+- [x] Types und Daten separieren
+- [x] Ordnerstruktur anpassen
