@@ -3,6 +3,8 @@ import facebookFooter from '@assets/footer-facebook.svg';
 import phoneIcon from '@assets/phone.svg';
 import emailWhite from '@assets/email-white.svg';
 import { Link } from 'react-router-dom';
+import { contacts } from '@data/contacts';
+import { FooterLink as TFooterLink } from '../types';
 
 type ContactProps = {
   department: string;
@@ -11,41 +13,7 @@ type ContactProps = {
   email?: string;
 };
 
-type FooterLink = {
-  name: string;
-  url: string;
-  imgSrc?: string;
-  imgAlt?: string;
-};
-
-const contacts = [
-  {
-    department: 'Vertrieb',
-    phone: '06858 / 9797-600',
-    availability: 'Mo-Fr 09-18 Uhr',
-    email: 'vertrieb@foodgenius.de',
-  },
-
-  {
-    department: 'Support',
-    phone: '06858 / 9797-0',
-    availability: 'Mo-Fr 09-18 Uhr',
-    email: 'support@foodgenius.de',
-  },
-  {
-    department: 'Buchhaltung',
-    phone: '06858 / 9797-200',
-    availability: 'Mo-Fr 09-12 Uhr',
-    email: 'buchhaltung@foodgenius.de',
-  },
-  {
-    department: 'Notdienst',
-    phone: '06858 / 9797-110',
-    availability: 'Immer erreichbar',
-  },
-];
-
-const footerLinks: FooterLink[] = [
+const footerLinks: TFooterLink[] = [
   {
     name: 'Facebook',
     url: 'https://www.facebook.com/foodgenius.de/',
