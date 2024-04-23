@@ -1,9 +1,17 @@
-import armUp from '@assets/FoodGenius-Keyimage-arm-up.png';
 import logoSlider from '@assets/FoodGenius-home-slider.jpg';
-import action1 from '@assets/action1.svg';
-import kontakt from '@assets/kontakt.svg';
+import HeroDescription from '@components/HeroDescription';
 import BenefitsSection from '@components/BenefitsSection';
+import ActionSection from '@components/ActionSection';
 import TechSection from './Home/TechSection';
+
+const heroHomeContent = {
+  title:
+    'FoodGenius ist Kassensystem, Online-Shop und Restaurant / Lieferservice Management aus einer Hand',
+  paragraphs: [
+    'FoodGenius lässt Dich dabei glänzen, wo Du am besten bist: Gastgeber sein. FoodGenius regelt den Rest.',
+    'Viele Systeme können Dir punktuell das Leben erleichtern. Aber nur FoodGenius spart Dir Zeit, Geld und Nerven auf allen Ebenen des Restaurant Managements.',
+  ],
+};
 
 function Home() {
   return (
@@ -24,27 +32,7 @@ function Home() {
 
       {/* Hero description */}
       <section className="bg-white flex justify-center py-10 max-md:mt-20 xl:py-20">
-        <div className="flex flex-col gap-8 items-center max-container text-center md:w-4/5">
-          <h2 className="max-w-[80%] text-3xl md:text-2xl lg:text-3xl xl:text-4xl 2xl:text-5xl">
-            FoodGenius ist Kassensystem, Online-Shop und Restaurant /
-            Lieferservice Management aus einer Hand
-          </h2>
-          <p className="md:w-[70%] md:text-sm lg:text-xl xl:text-2xl">
-            <span className="inline xl:block">
-              FoodGenius lässt Dich dabei glänzen, wo Du am besten bist:&nbsp;
-            </span>
-            <span className="inline xl:block">
-              Gastgeber sein. FoodGenius regelt den Rest.
-            </span>
-          </p>
-          <p className="md:w-[70%] md:text-sm lg:text-xl xl:text-2xl">
-            <span className="md:block">
-              Viele Systeme können Dir punktuell das Leben erleichtern.
-            </span>{' '}
-            Aber nur FoodGenius spart Dir Zeit, Geld und Nerven auf allen Ebenen
-            des Restaurant Managements.
-          </p>
-        </div>
+        <HeroDescription {...heroHomeContent} />
       </section>
 
       {/* Benefits */}
@@ -54,36 +42,7 @@ function Home() {
 
       {/* Action section */}
       <section className="bg-gray-medium h-96 max-md:hidden md:h-56 lg:h-96 xl:h-[28rem]">
-        <div className="grid grid-cols-3 gap-8 h-full max-container">
-          <img
-            src={armUp}
-            alt="Foodgenius Held"
-            className="object-contain object-bottom h-32 md:h-56 lg:h-full"
-          />
-
-          <div className="flex flex-col justify-evenly text-center underline lg:text-2xl xl:text-3xl">
-            <div className="bg-white flex justify-center items-center min-h-[30%] p-4 md:p-2">
-              <h3 className="flex-grow">Werde ein Held</h3>
-              <img
-                src={action1}
-                alt="Paket Optionen"
-                className="action-border md:w-10 md:h-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14"
-              />
-            </div>
-
-            <div className="bg-white p-4 md:p-2 flex justify-center items-center min-h-[30%]">
-              <h3 className="flex-grow">
-                <span>Ich möchte persönlich </span>
-                <span className="block">beraten werden</span>
-              </h3>
-              <img
-                src={kontakt}
-                alt="Kontakt Formular"
-                className="action-border md:w-10 md:h-10 xl:w-12 xl:h-12 2xl:w-14 2xl:h-14"
-              />
-            </div>
-          </div>
-        </div>
+        <ActionSection />
       </section>
 
       {/* Tech Section */}
